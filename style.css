@@ -1,0 +1,52 @@
+#wrapper {
+    --wrapper-width: 600px; --wrapper-height: 450px;
+    position: relative;       
+    width: var(--wrapper-width); height: var(--wrapper-height);
+    border: solid black 2px;
+    font-size: 0;     
+    overflow: hidden;
+}
+
+#roller {
+    all: unset;
+    display: block;
+    white-space: nowrap;
+
+    transform: translateX(0);
+    transition: transform 0.8s ease 0s;
+}
+
+#roller > li {
+    all: unset;
+    display: inline-block;
+    width: var(--wrapper-width); height: 100%;
+    overflow: hidden;
+}
+
+#roller img {
+    height: var(--wrapper-height);
+}
+
+#index {
+    all: unset;
+    position: absolute;
+    bottom: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#index > li {
+    all: unset;
+    width: 4px; height: 4px;
+    background: white;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#index > li.selected {
+    background: red;
+}
